@@ -23,7 +23,7 @@ public class JwtTool {
     /**
      * 创建 access-token
      *
-     * @param userId 用户信息
+     * @param userDTO 用户信息
      * @return access-token
      */
     public String createToken(Long userId, Duration ttl) {
@@ -73,7 +73,7 @@ public class JwtTool {
 
         // 5.数据解析
         try {
-            return Long.valueOf(userPayload.toString());
+           return Long.valueOf(userPayload.toString());
         } catch (RuntimeException e) {
             // 数据格式有误
             throw new UnauthorizedException("无效的token");

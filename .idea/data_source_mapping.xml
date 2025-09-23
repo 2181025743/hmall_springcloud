@@ -2,7 +2,6 @@
 <project version="4">
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/b7f30a54-a627-4b94-a748-f3115d4ac8a7/console.sql" value="b7f30a54-a627-4b94-a748-f3115d4ac8a7" />
-    <file url="file://$PROJECT_DIR$/cart_service/src/main/java/com/hmall/cart/mapper/CartMapper.java" value="95f045c9-294c-4144-a047-d96a06d43e24" />
     <file url="file://$PROJECT_DIR$/item-service/src/main/java/com/hmall/item/mapper/ItemMapper.java" value="95f045c9-294c-4144-a047-d96a06d43e24" />
   </component>
 </project>
