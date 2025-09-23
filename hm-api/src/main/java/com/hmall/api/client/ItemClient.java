@@ -2,8 +2,6 @@ package com.hmall.api.client;
 
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
-import com.hmall.common.domain.PageDTO;
-import com.hmall.item.domain.query.ItemPageQuery;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,7 +18,4 @@ public interface ItemClient {
     
     @PutMapping("/items/stock/deduct")
     void deductStock(@RequestBody List<OrderDetailDTO> items);
-    
-    @GetMapping("/search/list")
-    PageDTO<ItemDTO> search(ItemPageQuery query);
 }

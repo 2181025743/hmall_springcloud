@@ -4,7 +4,8 @@ spring:
   application:
     name: trade-service
   profiles:
-    active: dev
+    # 将 dev 修改为 local
+    active: local
   datasource:
     url: jdbc:mysql://${hm.db.host}:3306/hmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -2,8 +2,8 @@ package com.hmall.item.controller;
 
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hmall.api.dto.ItemDTO;
 import com.hmall.common.domain.PageDTO;
-import com.hmall.item.domain.dto.ItemDTO;
 import com.hmall.item.domain.po.Item;
 import com.hmall.item.domain.query.ItemPageQuery;
 import com.hmall.item.service.IItemService;
@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/search")
 @RequiredArgsConstructor
 public class SearchController {
-
     private final IItemService itemService;
 
     @ApiOperation("搜索商品")
