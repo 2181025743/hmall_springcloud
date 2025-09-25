@@ -1,4 +1,11 @@
 hm:
   db:
-    host: 101.42.238.233 # 修改为你自己的虚拟机IP地址
-    pw: 123456 # 修改为docker中的MySQL密码
+    host: 101.42.238.233
+    port: 3306
+    database: hmall
+    username: root
+    pw: Hm#2024@MySQL
+  swagger:
+    title: 黑马商城商品管理接口文档
+    desc: 黑马商城商品管理接口文档
+    package: com.hmall.item.controller

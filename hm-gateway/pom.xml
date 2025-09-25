@@ -15,6 +15,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-security-rsa.version>1.0.11.RELEASE</spring-security-rsa.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
@@ -38,23 +40,38 @@
             <groupId>com.heima</groupId>
             <artifactId>hm-common</artifactId>
             <version>1.0.0</version>
-        </dependency> <!-- JWT依赖 -->
+        </dependency>
+        <!-- JWT依赖 -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-jwt</artifactId>
-            <version>${hutool.version}</version> <!-- 确保版本与父POM一致 -->
+            <version>${hutool.version}</version>
         </dependency>
         <!-- RSA加密支持 -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-rsa</artifactId>
-            <version>1.0.11.RELEASE</version> <!-- 使用一个稳定版本 -->
+            <version>${spring-security-rsa.version}</version>
         </dependency>
-        <!-- 引入我们自己的common包 -->
+        <!-- nacos config -->
         <dependency>
-            <groupId>com.heima</groupId>
-            <artifactId>hm-common</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!-- bootstrap loader -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <!-- FastJSON 依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
         </dependency>
     </dependencies>
 
@@ -64,7 +81,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+        </plugin>
         </plugins>
     </build>
 </project>

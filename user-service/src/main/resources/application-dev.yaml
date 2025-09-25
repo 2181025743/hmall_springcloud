@@ -1,4 +1,11 @@
 hm:
   db:
     host: mysql
-    pw: 123
+    port: 3306
+    database: hmall
+    username: root
+    pw: Hm#2024@MySQL
+  swagger:
+    title: 黑马商城用户服务接口文档
+    desc: 黑马商城用户服务接口文档
+    package: com.hmall.user.controller

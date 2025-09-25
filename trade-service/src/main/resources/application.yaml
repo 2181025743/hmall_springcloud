@@ -4,56 +4,7 @@ spring:
   application:
     name: trade-service
   profiles:
-    # 将 dev 修改为 local
     active: local
-  datasource:
-    url: jdbc:mysql://${hm.db.host}:3306/hmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ${hm.db.pw}
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 101.42.238.233:8848   # 你的 Nacos 服务器地址和端口
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
-logging:
-  level:
-    com.hmall: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-knife4j:
-  enable: true
-  production: false
-  basic:
-    enable: false
-    username: test
-    password: 123
-  openapi:
-    title: 黑马商城交易服务接口文档
-    group:
-      default:
-        api-rule-resources:
-          - com.hmall.trade.controller
-hm:
-  jwt:
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
-    tokenTTL: 30m
-  auth:
-    excludePaths:
-      - /search/**
-      - /users/login
-      - /items/**
-      - /hi
+      matching-strategy: ant_path_matcher  # 修复 Springfox 兼容性问题

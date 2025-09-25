@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
@@ -48,7 +49,7 @@ public class AuthorizeGlobalFilter implements GlobalFilter, Ordered {
             userId = jwtTool.parseToken(token);
         } catch (UnauthorizedException e) {
             // 如果解析失败，直接拦截
-            response.setRawStatusCode(401);
+            response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
         }
 

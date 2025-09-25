@@ -18,6 +18,8 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        String token = exchange.getRequest().getHeaders().getFirst("Authorization");
+        System.out.println(token);
         return chain.filter(exchange);
     }
 }

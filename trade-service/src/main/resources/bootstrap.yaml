@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: trade-service
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.42.238.233:8848
+      config:
+        server-addr: 101.42.238.233:8848
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-jdbc.yaml
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml
+          - data-id: shared-auth.yaml

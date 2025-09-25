@@ -52,4 +52,10 @@ public class CartController {
     public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids) {
         cartService.removeByItemIds(ids);
     }
+
+    // 添加一个测试接口
+    @GetMapping("/test")
+    public String test() {
+        return "Sentinel Test - " + System.currentTimeMillis();
+    }
 }

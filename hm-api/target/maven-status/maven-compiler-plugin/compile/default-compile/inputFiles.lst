@@ -1,3 +1,5 @@
+D:\project\java\hmall\hm-api\src\main\java\com\hmall\api\config\DefaultFeignConfig.java
+D:\project\java\hmall\hm-api\src\main\java\com\hmall\api\client\fallback\ItemClientFallbackFactory.java
 D:\project\java\hmall\hm-api\src\main\java\com\hmall\api\client\UserClient.java
 D:\project\java\hmall\hm-api\src\main\java\com\hmall\api\dto\OrderDetailDTO.java
 D:\project\java\hmall\hm-api\src\main\java\com\hmall\api\dto\ItemDTO.java
