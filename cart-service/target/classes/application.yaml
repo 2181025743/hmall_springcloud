@@ -24,3 +24,15 @@ feign:
     enabled: true
   sentinel:
     enabled: true  # 开启 Feign 的 Sentinel 支持，这是关键配置
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: ${spring.application.name}-group
+  service:
+    vgroup-mapping:
+      ${spring.application.name}-group: default
+  registry:
+    type: file
+  config:
+    type: file

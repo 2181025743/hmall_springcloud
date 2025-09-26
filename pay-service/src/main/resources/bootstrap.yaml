@@ -7,8 +7,12 @@ spring:
     nacos:
       discovery:
         server-addr: 101.42.238.233:8848
+        username: nacos
+        password: nacos
       config:
         server-addr: 101.42.238.233:8848
+        username: nacos
+        password: nacos
         file-extension: yaml
         shared-configs:
           - data-id: shared-jdbc.yaml

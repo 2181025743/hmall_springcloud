@@ -5,3 +5,6 @@ spring:
     name: trade-service
   profiles:
     active: local
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher  # 修复 Springfox 兼容性问题

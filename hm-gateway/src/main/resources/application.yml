@@ -18,3 +18,15 @@ spring:
             allowedHeaders: "*"
             allowCredentials: true
             maxAge: 360000
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: ${spring.application.name}-group
+  service:
+    vgroup-mapping:
+      ${spring.application.name}-group: default
+  registry:
+    type: file
+  config:
+    type: file

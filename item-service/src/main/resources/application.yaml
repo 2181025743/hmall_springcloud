@@ -1,10 +1,18 @@
 server:
   port: 8081
 spring:
-  application:
-    name: item-service
-  profiles:
-    active: local
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher  # 修复 Springfox 兼容性问题
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: ${spring.application.name}-group
+  service:
+    vgroup-mapping:
+      ${spring.application.name}-group: default
+  registry:
+    type: file
+  config:
+    type: file
