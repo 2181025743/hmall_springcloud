@@ -6,11 +6,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 101.42.238.233:8848
+        server-addr: 114.132.63.109:8848
         username: nacos
         password: nacos
       config:
-        server-addr: 101.42.238.233:8848
+        server-addr: 114.132.63.109:8848
         username: nacos
         password: nacos
         file-extension: yaml

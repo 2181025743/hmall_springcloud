@@ -2,20 +2,20 @@ spring:
   application:
     name: item-service
   profiles:
-    active: local
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 101.42.238.233:8848
-        username: nacos
-        password: nacos
-      config:
-        server-addr: 101.42.238.233:8848
-        username: nacos
-        password: nacos
-        file-extension: yaml
-        shared-configs:
-          - data-id: shared-jdbc.yaml
-          - data-id: shared-log.yaml
-          - data-id: shared-swagger.yaml
-          - data-id: shared-auth.yaml
+    #    active: local
+    #  cloud:
+    #    nacos:
+    #      discovery:
+    #    server-addr: 114.132.63.109:8848
+    #    username: nacos
+    #    password: nacos
+    config:
+      server-addr: 114.132.63.109:8848
+      username: nacos
+      password: nacos
+      file-extension: yaml
+      shared-configs:
+        - data-id: shared-jdbc.yaml
+        - data-id: shared-log.yaml
+        - data-id: shared-swagger.yaml
+        - data-id: shared-auth.yaml
